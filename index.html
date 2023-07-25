@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Library Name</title>
   </head>
@@ -35,33 +40,35 @@
       </section>
 
       <section class="container row">
-          <div class="col-4 card" id="search-form">
-            <h2 class="card-header">Search Criteria</h2>
-            <form class="card-body">
-              <label for="author">Author</label><br>
-              <input type="text" id="author" name="author"><br>
-              <label for="title">Title</label><br>
-              <input type="text" id="title" name="title"><br>
-              <label for="language">Language</label><br>
-              <input id="language"><br>
-              <label for="page-count" id="page-count" name="page-count">Page Count</label><br>
-              <input id="page-count"><br>
-              <label for="genre" id="genre" name="genre">Genre</label><br>
-              <input id="genre"><br>
-                <button type="submit">Search</button>
-            </form>
-          </div>
+        <div class="col-4 card" id="search-form">
+          <h2 class="card-header">Search Criteria</h2>
+          <form class="card-body">
+            <label for="author">Author</label><br />
+            <input type="text" id="author" name="author" /><br />
+            <label for="title">Title</label><br />
+            <input type="text" id="title" name="title" /><br />
+            <label for="language">Language</label><br />
+            <input id="language" /><br />
+            <label for="page-count" id="page-count" name="page-count"
+              >Page Count</label
+            ><br />
+            <input id="page-count" /><br />
+            <label for="genre" id="genre" name="genre">Genre</label><br />
+            <input id="genre" /><br />
+            <button type="submit">Search</button>
+          </form>
+        </div>
 
-          <div class="col-8" id="results">
-            <h2>results</h2>
-              <div>
-                <a>Result</a>
-                <!--Image of book cover-->
-                <button>Inspect</button>
-              </div> <!--this can be changed later-->
+        <div class="col-8" id="results">
+          <h2>results</h2>
+          <div>
+            <a>Result</a>
+            <!--Image of book cover-->
+            <button>Inspect</button>
           </div>
+          <!--this can be changed later-->
+        </div>
       </section>
-
     </main>
     <script src="./assets/js/script.js"></script>
   </body>

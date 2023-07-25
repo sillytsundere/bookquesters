@@ -1,0 +1,25 @@
+.navbar {
+    background-color: lightgrey;
+    display: flex;
+    color: black;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 15px;
+    margin-left: auto; /
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navbar-links a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  
+  .library-heading {
+    padding: 26px;
+  }

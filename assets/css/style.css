@@ -1,25 +1,62 @@
 .navbar {
-    background-color: lightgrey;
+  background-color: lightgrey;
+  display: flex;
+  color: black;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+  margin-left: auto; 
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-links a:hover {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.library-heading {
+  padding: 26px;
+}
+
+section.container.row {
     display: flex;
-    color: black;
-  }
-  
-  .navbar-links {
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+section.container.row .card {
     display: flex;
-    gap: 15px;
-    margin-left: auto; /
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  .navbar-links a:hover {
-    background-color: #ddd;
-    border-radius: 5px;
-  }
-  
-  .library-heading {
-    padding: 26px;
-  }
+    align-items: center;
+    padding: 0px;
+    margin: 10px;
+    border: 3px solid #224952;
+    box-shadow: 10px 5px 5px #224952;
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+    width: 100%;
+    font-size: 25px;
+}
+
+div#results {
+    /* display: contents; */
+    display: inline-block;
+    position: relative;
+    bottom: 185px;
+    left: 15px;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+    padding: 1.25rem;
+    width: 100%;
+}

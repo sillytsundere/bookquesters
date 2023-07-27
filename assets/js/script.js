@@ -1,32 +1,14 @@
-// Function to hide welcome screen and display search screen
-function navigateToAboutPage() {
-    window.location.href = "./about.html";
-  }
-  
-  // Get the "Get Started" button element
-  var getStarted = document.getElementById('start-btn');
-  
-  // Add event listener to the "Get Started" button
-  getStarted.addEventListener('click', function() {
-    navigateToAboutPage();
-  });
-  
-  // All variables declared at the top
-  var welcomeSctn = document.getElementById('welcome');
-  
-  // Button selectors
-  var getStarted = document.getElementById('start-btn');
-  
-  // Function to take user from welcome page to about me page
-  getStarted.addEventListener('click', function() {
-    welcomeSctn.setAttribute('style', 'display:none');
-    navigateToAboutPage();
-  });
-  
-  // Function to hide welcome screen and display search screen
-  getStarted.addEventListener('click', function() {
-    welcomeSctn.setAttribute('style', 'display:none');
-  });
+//all variables declared at the top
+var welcomeSctn = document.getElementById('welcome');
+
+//button selectors
+var getStarted = document.getElementById('start-btn');
+var searchLink = document.getElementById('search-link');
+
+//function to hide welcome section and display search page when search link in nav-bar is clicked
+getStarted.addEventListener('click', function(){
+    window.location.assign('search.html');
+})
   
   // Variable to store the Google Books API base URL
   const googleBooksAPIBaseURL = "https://www.googleapis.com/books/v1/volumes?q=";

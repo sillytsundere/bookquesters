@@ -1,6 +1,8 @@
   
   // Variable to store the Google Books API base URL
   const googleBooksAPIBaseURL = "https://www.googleapis.com/books/v1/volumes?q=";
+
+  //variable to transfer book api object info to info.html page
   
   function formatVariable(value) {
     if (value) {
@@ -56,52 +58,56 @@
   // Function to fetch books from the Google Books API
   function fetchBooksFromAPI(searchQuery) {
     // Clear previous search results
-    document.getElementById("results").children[1].innerHTML = "";
+    document.getElementById("result-entrys").innerHTML = "";
   
     // Fetch data from the Google Books API
     fetch(googleBooksAPIBaseURL + searchQuery)
       .then((response) => response.json())
       .then((data) => {
         // Process the response data
-        //displayBooks(data.items);
+        displayBooks(data.items);
         console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching data from Google Books API:", error);
       });
+
   }
   
-  // Function to display the search results
-  // function displayBooks(books) {
-  //   const resultsDiv = document.getElementById("results");
+  //Function to display the search results
+  function displayBooks(books) {
+    const resultsDiv = document.getElementById("result-entrys");
   
-  //   // Loop through the books and create a result entry for each book
-  //   books.forEach((book) => {
-  //     const bookInfo = book.volumeInfo;
-  //     const bookTitle = bookInfo.title;
-  //     const bookImage = bookInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x192"; // Use a placeholder image if no thumbnail is available
-  
-  //     const bookEntry = document.createElement("div");
-  //     bookEntry.innerHTML = `
-  //       <a href="${bookInfo.previewLink}" target="_blank">${bookTitle}</a>
-  //       <img src="${bookImage}" alt="${bookTitle}" />
-  //       <button onclick="showBookDetails('${book.id}')">Inspect</button>
-  //     `;
-  
-  //     resultsDiv.appendChild(bookEntry);
-  //   });
-  // }
-  
-  // Function to show book details when the "Inspect" button is clicked
-  function showBookDetails(bookId) {
-    // You can implement this function to display more details about the selected book.
-    // You may use the Google Books API again to fetch additional details about the book,
-    // such as the description, average rating, and more.
-    // For simplicity, let's just alert the book ID for now.
-    alert("Book ID: " + bookId);
+    // Loop through the books and create a result entry for each book
+    books.forEach((book) => {
+      console.log(book);
+      const bookInfo = book.volumeInfo;
+      const bookTitle = bookInfo.title;
+      const bookAuthor = bookInfo.authors;
+      const bookImage = bookInfo.imageLinks?.thumbnail || "https://via.placeholder.com/128x192"; // Use a placeholder image if no thumbnail is available
+      const bookString = JSON.stringify(book);
+      const bookEntry = document.createElement("div");
+      bookEntry.setAttribute("id", "book-entry");
+      bookEntry.innerHTML = `
+        <a href="${bookInfo.previewLink}" target="_blank">${bookTitle}</a><a> by ${bookAuthor}</a>
+        <img src="${bookImage}" alt="${bookTitle}" />
+        <button onclick="showBookDetails('${encodeURIComponent(bookString)}')">Inspect</button>
+      `;
+      
+      resultsDiv.appendChild(bookEntry);
+    });
   }
-  
+
+  //Function to show book details when the "Inspect" button is clicked-in info.html page
+  function showBookDetails(book) {
+    console.log(JSON.parse(decodeURIComponent(book)));
+    localStorage.setItem('inspectedBook', decodeURIComponent(book));
+    setTimeout(() => {
+      window.location.assign('info.html');
+    }, 100);
+
+  }
+
   // Add event listener to the form to handle form submission
   const searchForm = document.querySelector("form");
   searchForm.addEventListener("submit", handleFormSubmit);
-  

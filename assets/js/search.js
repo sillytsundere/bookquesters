@@ -91,7 +91,7 @@
       bookEntry.innerHTML = `
         <a href="${bookInfo.previewLink}" target="_blank">${bookTitle}</a><a> by ${bookAuthor}</a>
         <img src="${bookImage}" alt="${bookTitle}" />
-        <button onclick="showBookDetails('${encodeURIComponent(bookString)}')">Inspect</button>
+        <button onclick="showBookDetails('${encodeURIComponent(bookString).replace(/'/g, '%27').replace(/"/g, '%22').replace(/`/g, '%60')}')">Inspect</button>
       `;
       
       resultsDiv.appendChild(bookEntry);
@@ -100,8 +100,9 @@
 
   //Function to show book details when the "Inspect" button is clicked-in info.html page
   function showBookDetails(book) {
-    console.log(JSON.parse(decodeURIComponent(book)));
-    localStorage.setItem('inspectedBook', decodeURIComponent(book));
+    var decodedBookString = decodeURIComponent(book.replaceAll('%27', "'").replaceAll('%22', '"').replaceAll('%60', '`'));
+    console.log(decodedBookString);
+    localStorage.setItem('inspectedBook', decodedBookString);
     setTimeout(() => {
       window.location.assign('info.html');
     }, 100);

@@ -9,7 +9,6 @@ console.log(book);
 
 var bookDisplay = document.getElementById('book-display');
 var addBtn = document.getElementById('add');
-var myBooks = [];
 
 function displayInfo() {
     //following variables select html elements to display book information on the info.html page so user can learn about book
@@ -37,30 +36,26 @@ function displayInfo() {
 addBtn.addEventListener("click", addToList);
 
 function addToList () {
-
-    var title = document.getElementById('title-display').innerHTML;
-    var author = document.getElementById('author-display').innerHTML;
-
-    var newBook = {
-        title: title,
-        author: author
-    };
-    console.log(newBook);
+    var book = JSON.parse(localStorage.getItem('inspectedBook'));
 
     var parsedBooks = JSON.parse(localStorage.getItem('myBooks'));
-    console.log(parsedBooks);
 
-    if (!parsedBooks){
+    if (!parsedBooks) {
         var initialBook = {
             myBooks: []
         }
-        initialBook.myBooks.push(newBook);
-        localStorage.setItem('myBooks', JSON.stringify(parsedBooks));
+        initialBook.myBooks.push(book);
+        localStorage.setItem('myBooks', JSON.stringify(initialBook));
     } else {
-        parsedBooks.myBooks.push(newBook);
+        for(var i = 0; i < parsedBooks.myBooks.length; i++) {
+            if (parsedBooks.myBooks[i].id === book.id) {
+                return;
+            }
+        }
+        parsedBooks.myBooks.push(book);
         localStorage.setItem('myBooks', JSON.stringify(parsedBooks));
     }
-    console.log(JSON.parse(localStorage.getItem('myBooks')));
+    document.location.replace("../../list.html");
 }
 
 displayInfo();

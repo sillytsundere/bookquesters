@@ -2,7 +2,7 @@
 
 ## Description
 
-BookQuesters is an online platform that offers the best of both worlds for book lovers. Whether you want to search for a specific book or let the internet decise, BookQuesters has a solution for you! 
+BookQuesters is an online platform that offers the best of both worlds for book lovers. Whether you want to search for a specific book or let the internet decide, BookQuesters has a solution for you! 
 
 With a simple click, discover a world of surprises through our "Random Book" feature, which introduces you to books from various genres, authors, and cultures. Immerse yourself in captivating stories you might have never stumbled upon otherwise.
 

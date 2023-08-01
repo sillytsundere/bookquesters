@@ -21,8 +21,15 @@
 
   <body>
     <header>
-      <h1 class="library-heading">BookQuesters</h1>
-      <nav class="navbar" style="background-color: lightgray">
+      <h1 class="text-5xl font-extrabold px-11 py-11">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-700"
+        >
+          BookQuesters
+        </span>
+      </h1>
+      <!---nav bar-->
+      <nav class="navbar" style="background-color: #0369a1">
         <div class="container-fluid">
           <div class="navbar-links">
             <a href="./index.html">Home</a>
@@ -33,25 +40,24 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main id="main-index">
       <section id="welcome" style="display: block">
-        <p>Welcome Message</p>
-        <button id="start-btn">
-          <a>Get Started</a>
-        </button>
-        <!--This button will initiate the search and lead to where users can inout the criteria they want to search by-->
-        <p>Click to know more!</p>
-        <button id="about-btn" class="bg-red-500">
-          <a>Click to know more!</a>
-        </button>
-        <!--This button links to an about the app webpage that describes how to use the app and ways we want to develope it in the future-->
-      </section>
-      <section id="random-list">
-        <button id="random-button">
-          <a>Random Books!</a>
-        </button>
-        <!--This button will randomly generate a list of books for users who want to try their chances with a random generator instead of making a more specific search-->
-      </section>
+        <p>“Welcome to BookQuesters! <br/>
+          Where you can search for a book you’ve been hungering after or let the internet decide what you should read next!<br/>
+           Either way, you’ll be able to keep track of your selections and become the reader that you want to be!”</p>
+        <button
+          id="start-btn"
+          class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        ><a>Get Started</a></button>
+        <button
+          id="about-btn"
+          class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        ><a>Click to know more!</a></button>
+      <section id="random-list"><button
+          id="random-button"
+          class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        ><a>Random Books!</a></button>
+        </section>
     </main>
     <script src="./assets/js/script.js"></script>
   </body>

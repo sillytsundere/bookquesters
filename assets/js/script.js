@@ -29,7 +29,9 @@ function getRandomBooks() {
             var randomEl = document.createElement('li');
             randomEl.textContent = randTitle + ' by ' + randAuthor;
             randomList.appendChild(randomEl);
-            //add button that will "add boot to user list"
+            //add button that will go to info page and let user add to list
+            // <button onclick="showBookDetails()">Inspect</button>
+            // window.location.assign('info.html');
         }
       })     
 }

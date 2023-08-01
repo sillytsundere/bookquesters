@@ -3,19 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Library Name</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>BookQuesters</title>
   </head>
 
   <body>
     <header>
-        <h1>How to use this Application!</h1>
-        <button>
-            <a href="./index.html">Return Home</a>
-        </button>
-        <!--This button returns to main welcome page-->
+      <h1 class="text-5xl font-extrabold px-11 py-11">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-700"
+        >
+          BookQuesters
+        </span>
+      </h1>
+      <nav class="navbar" style="background-color: #0369a1">
+        <div class="container-fluid">
+          <div class="navbar-links">
+            <a href="./index.html">Home</a>
+            <a id="search-link" href="./search.html">Search</a>
+            <a href="./list.html">My List</a>
+            <a href="./about.html">About Us</a>
+          </div>
+        </div>
+      </nav>
+      <h2 id="about-h2">How to use this Application!</h2>
     </header>
-    <main>
-        <p>Diagrams, pictures and text will go here describing how to use this web application and what it can do-possibly also what we want it to do in the future!</p>
+    <main id="about-bq">
+      <p>
+        BookQuesters is an online platform that offers the best of both worlds
+        for book lovers. Whether you want to search for a specific book or let
+        the internet decide, BookQuesters has a solution for you!
+        <br />
+        With a simple click, discover a world of surprises through our "Random
+        Book" feature, which introduces you to books from various genres,
+        authors, and cultures. Immerse yourself in captivating stories you might
+        have never stumbled upon otherwise!
+        <br />
+        BookQuesters also empowers you to take control of your reading journey.
+        Easily search and explore a vast library of books using our
+        user-friendly search function, where you can find your favorite authors,
+        titles, and genres.
+        <br />
+        The site also has a convenient "Add to list" feature, allowing you to
+        create a personalized collection of books you'd like to explore when the
+        time is right.
+      </p>
+      <!--This button returns to main welcome page-->
+      <button
+        id="return-btn"
+        class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        <a href="./index.html">Return Home</a>
+      </button>
     </main>
   </body>
 </html>

@@ -1,18 +1,20 @@
 .navbar {
   background-color: lightgrey;
   display: flex;
-  color: black;
+  color: white;
+  color: white;
 }
 
 .navbar-links {
   display: flex;
   gap: 15px;
-  margin-left: auto; 
+  margin-left: auto;
+  margin-left: auto;
 }
 
 .navbar-links a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 .navbar-links a:hover {
@@ -24,39 +26,82 @@
   padding: 26px;
 }
 
+input[type=text] {
+  width: 100%;
+  margin: 6px 0;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  border: inset;
+}
+
+section.container.row button {
+  border-radius: 8px;
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+label {
+  font-size: 13px;
+  display: inline;
+  font-weight: bold;
+}
+
+div#search-form {
+  margin: 18px;
+  border: 3px solid #1e3a8a;
+  box-shadow: 10px 10px 15px #1e3a8a;
+  padding: 0px;
+}
+
 section.container.row {
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-section.container.row .card {
-    display: flex;
-    align-items: center;
-    padding: 0px;
-    margin: 10px;
-    border: 3px solid #224952;
-    box-shadow: 10px 5px 5px #224952;
-}
-
-.card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-    width: 100%;
-    font-size: 25px;
+h2.card-header {
+  width: 100%;
+  background-color: #1e3a8a;
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 div#results {
-    /* display: contents; */
-    display: inline-block;
-    position: relative;
-    bottom: 185px;
-    left: 15px;
+  position: relative;
+  top: 28px;
+  font-weight: bold;
 }
 
-.card-body {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto; 
-    padding: 1.25rem;
-    width: 100%;
+.card-header:first-child {
+  border-radius: 0;
+}
+
+#result-entrys {
+  padding-top: 200px;
+}
+
+#about-bq,
+#about-h2 {
+  padding-left: 40px;
+  padding-top: 25px;
+  padding-right: 25px;
+}
+
+#result-entrys {
+  padding-top: 200px;
+}
+
+#about-bq,
+#about-h2 {
+  padding-left: 40px;
+  padding-top: 25px;
+  padding-right: 25px;
 }

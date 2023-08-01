@@ -2,16 +2,19 @@
   background-color: lightgrey;
   display: flex;
   color: white;
+  color: white;
 }
 
 .navbar-links {
   display: flex;
   gap: 15px;
   margin-left: auto;
+  margin-left: auto;
 }
 
 .navbar-links a {
   text-decoration: none;
+  color: white;
   color: white;
 }
 
@@ -80,6 +83,17 @@ div#results {
 
 .card-header:first-child {
   border-radius: 0;
+}
+
+#result-entrys {
+  padding-top: 200px;
+}
+
+#about-bq,
+#about-h2 {
+  padding-left: 40px;
+  padding-top: 25px;
+  padding-right: 25px;
 }
 
 #result-entrys {

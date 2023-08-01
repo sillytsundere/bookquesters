@@ -1,7 +1,7 @@
 .navbar {
   background-color: lightgrey;
   display: flex;
-  color: black;
+  color: white;
 }
 
 .navbar-links {
@@ -12,7 +12,7 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .navbar-links a:hover {
@@ -63,4 +63,11 @@ div#results {
 
 #result-entrys {
   padding-top: 200px;
+}
+
+#about-bq,
+#about-h2 {
+  padding-left: 40px;
+  padding-top: 25px;
+  padding-right: 25px;
 }

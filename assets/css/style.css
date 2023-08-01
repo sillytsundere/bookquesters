@@ -24,7 +24,7 @@
   padding: 26px;
 }
 
-section.container.row {
+/*section.container.row {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
@@ -40,13 +40,11 @@ section.container.row .card {
 }
 
 .card-header:first-child {
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
     width: 100%;
     font-size: 25px;
 }
 
 div#results {
-    /* display: contents; */
     display: inline-block;
     position: relative;
     bottom: 185px;
@@ -59,4 +57,62 @@ div#results {
     flex: 1 1 auto; 
     padding: 1.25rem;
     width: 100%;
+}*/
+
+input[type=text] {
+  width: 100%;
+  margin: 6px 0;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  border: inset;
+}
+
+section.container.row button {
+  border-radius: 8px;
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #1d4ed8;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+label {
+  font-size: 13px;
+  display: inline;
+  font-weight: bold;
+}
+
+div#search-form {
+  margin: 18px;
+  border: 3px solid #1e3a8a;
+  box-shadow: 10px 10px 15px #1e3a8a;
+  padding: 0px;
+}
+
+section.container.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+h2.card-header {
+  width: 100%;
+  background-color: #1e3a8a;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+div#results {
+  position: relative;
+  top: 28px;
+  font-weight: bold;
+}
+
+.card-header:first-child {
+  border-radius: 0;
 }

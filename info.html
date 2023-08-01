@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -30,14 +31,20 @@
     
     <main>
 
-      <section>
-        <h2>Book that got clicked on</h2>
-        <section>
-          <!--<info about book>
-          <image of book cover>
-          <avg rating><place button here that takes user to list of reviews><will need to add back button>
-          <add to list button>-->
+      <section id="book-display">
+        <h2 id="title-display"></h2>
+        <h4 id="author-display"></h4>
+        <div>
+          <section>
+          <div id="description"></div>
+          <div id="language"></div>
+          <div id="category"></div>
+          <div id="page-num"></div>
+          <div id="rating"></div>
         </section>
+        <section id="book-cover"></section>
+        </div>
+        <button id="add">Add to My List</button>
 
     </main>
     <script src="./assets/js/info.js"></script>

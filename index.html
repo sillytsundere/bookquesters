@@ -41,23 +41,26 @@
       </nav>
     </header>
     <main id="main-index">
-      <section id="welcome" style="display: block">
-        <p>“Welcome to BookQuesters! <br/>
+      <!-- <img class="main-image" src="./assets/images/space-books.jpg"> -->
+      <section id="welcome" style="display: flex; flex-direction: column; align-items: center;">
+        <p class="main-text">Welcome to BookQuesters! <br/>
           Where you can search for a book you’ve been hungering after or let the internet decide what you should read next!<br/>
-           Either way, you’ll be able to keep track of your selections and become the reader that you want to be!”</p>
-        <button
-          id="start-btn"
-          class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        ><a>Get Started</a></button>
-        <button
-          id="about-btn"
-          class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        ><a>Click to know more!</a></button>
+           Either way, you’ll be able to keep track of your selections and become the reader that you want to be!</p>
+        <div>
+          <button id="start-btn" class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a>Get Started</a>
+          </button>
+          <button id="about-btn" class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a>Click to know more!</a>
+          </button> 
+        </div>
+      </section> <br>
       <section id="random-list"><button
           id="random-button"
           class="bg-blue-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         ><a>Random Books!</a></button>
-        </section>
+        <!--The list of random books populates here-->
+      </section>
     </main>
     <script src="./assets/js/script.js"></script>
   </body>

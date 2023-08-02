@@ -45,13 +45,23 @@ The Javascript file can be viewed to inspect the complex interactivity of the we
 
 ## Usage
 
+![Home Page](assets/images/index.html.png)
+
+The home page has buttons to learn more about the site, get started with a book search and generate a list of random books.
+
 The "Random Books" feature can take the pressure of knowing what to look for away and present you with a list of randomly selected books to choose from to add to your list.
 
-Those who already know what they wish to look for can use our "search" feature to search for a book by the Title, Author, genre or language! The results can be inspected to see the book description, average rating, page count and 
+![Search Page](assets/images/search.html.png)
 
-!!Add screenshots here after site is deployed!!
+Those who already know what they wish to look for can use our "search" feature to search for a book by the Title, Author, genre or language! The results can be inspected to see the book description, language, genre, page count and average rating. On this page is also a button to enable users to add the book to their book list.
 
-The deployed site can be reached at this link: !!add link here!!
+![Info Page](assets/images/info.html.png)
+
+Clicking the "Add to My List" button will add the selected book to the user's list and take them to their personal list page where thay can view their list and remove books from the list if so desired.
+
+![List Page](assets/images/list.html.png)
+
+The deployed site can be reached at this link: https://sillytsundere.github.io/team-3-project/
 
 ## Credits
 
@@ -73,7 +83,7 @@ Two API Libraries were used in this application;<br>
 
 ## License
 
-*****Add License*****
+MIT License
 
 ## Badges
 

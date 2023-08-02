@@ -106,7 +106,7 @@ div#results {
   align-items: center;
   margin: 0;
   flex-direction: column;
-  height: 750px;
+  height: 900px;
   background-image: url("../images/space-books.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -119,13 +119,6 @@ div#results {
   width: 75%;
   border-radius: 6px;
   display: flex;
-}
-
-#main-index{
-  height: 750px;
-  background-image: url("../images/space-books.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 #random-list {
@@ -146,7 +139,7 @@ div#results {
 
 .random-books {
   color: black;
-  font-size: 18px;
+  font-size: 21px;
   background-color: rgba(255, 255, 255, 0.451);
   border-radius: 6px;
 }

@@ -1,8 +1,7 @@
 // Variable to store the Google Books API base URL
 const googleBooksAPIBaseURL = "https://www.googleapis.com/books/v1/volumes?q=";
 
-//variable to transfer book api object info to info.html page
-
+//formats user input to be able to concat the search terms appropriately into API URL query
 function formatVariable(value) {
   if (value) {
     var newValue = value.trim().replace(/ /g, "+");
@@ -10,6 +9,8 @@ function formatVariable(value) {
   }
 }
 
+//function generates string query to be added to api url
+//if statements check for which inputs user has searched for in the form
 function formatStringQuery(genre, author, title, language) {
   var stringQuery = "";
   if (genre) {
@@ -36,7 +37,7 @@ function formatStringQuery(genre, author, title, language) {
   return `${stringQuery}&maxResults=30`;
 }
 
-// Function to handle the form submission
+// Function to handle the form submission, places user inputs into variables and calls function to format the query and fetch from API
 function handleFormSubmit(event) {
   event.preventDefault();
 
@@ -68,10 +69,9 @@ function fetchBooksFromAPI(searchQuery) {
       console.log(data);
     })
     .catch((error) => {
+      //prints error message in console in case there was an error fetching from api
       console.error("Error fetching data from Google Books API:", error);
     });
-  const searchForm = document.getElementById("search-form");
-  searchForm.style.display = "none";
 }
 
 //Function to display the search results
@@ -93,11 +93,13 @@ function displayBooks(books) {
         <a href="${
           bookInfo.previewLink
         }" target="_blank">${bookTitle}</a><a> by ${bookAuthor}</a>
+        <div class="picture-inspect">
         <img src="${bookImage}" alt="${bookTitle}" />
         <button onclick="showBookDetails('${encodeURIComponent(bookString)
           .replace(/'/g, "%27")
           .replace(/"/g, "%22")
           .replace(/`/g, "%60")}')">Inspect</button>
+        </div>
       `;
 
     resultsDiv.appendChild(bookEntry);
@@ -105,6 +107,7 @@ function displayBooks(books) {
 }
 
 //Function to show book details when the "Inspect" button is clicked-in info.html page
+//it saves the clicked book object to local storage to be grabbed by the info.html page once taken there after inspect button is clicked
 function showBookDetails(book) {
   var decodedBookString = decodeURIComponent(
     book.replaceAll("%27", "'").replaceAll("%22", '"').replaceAll("%60", "`")

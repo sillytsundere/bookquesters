@@ -12,6 +12,7 @@ var randomSection = document.getElementById('random-list');
 function getRandomBooks() {
     var apiURL = `https://openlibrary.org/search.json?q=the`;
 
+    //the fetch() and then() methods grab a list of 100 books from the open library API with the query 'the' to have a wide variety of books
     fetch(apiURL)
       .then(function (res) {
         return res.json();
@@ -19,9 +20,10 @@ function getRandomBooks() {
       .then((data) => {
         //create section to print 10 random books
         var randomList = document.createElement('ul');
+        randomList.setAttribute('class', 'random-books');
         randomSection.append(randomList);
 
-        //for loop grabs random number to pull from data array and takes book title and author from that pull and prints them in a li that is appended to the randomList ul element to present 
+        //for loop grabs random number to pull from data array and takes book title and author from that pull and prints them in a li that is appended to the randomList ul element to present, loop runs 10 times to list 10 random books
         for(var i = 0; i < 10; i++) {
             var randBook = Math.floor(Math.random() * data.docs.length);
             var randTitle = data.docs[randBook].title;
@@ -36,6 +38,7 @@ function getRandomBooks() {
       })     
 }
 
+//when user clicks "random book list" button this listens for it and initialtes function
 randomBtn.addEventListener('click', function() {
     getRandomBooks();
 })

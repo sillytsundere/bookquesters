@@ -49,7 +49,7 @@ function addToList () {
         parsedBooks.myBooks.push(book);
         localStorage.setItem('myBooks', JSON.stringify(parsedBooks));
     }
-    document.location.replace("../../list.html");
+    window.location.assign("list.html");
 }
 
 displayInfo();

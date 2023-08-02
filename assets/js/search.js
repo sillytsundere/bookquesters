@@ -46,7 +46,6 @@ function handleFormSubmit(event) {
   const title = document.getElementById("title").value;
   const language = document.getElementById("language").value;
   const genre = document.getElementById("genre").value;
-  console.log(genre);
 
   // Create the search query based on the user's inputs
   const searchQuery = formatStringQuery(genre, author, title, language);
@@ -66,7 +65,6 @@ function fetchBooksFromAPI(searchQuery) {
     .then((data) => {
       // Process the response data
       displayBooks(data.items);
-      console.log(data);
     })
     .catch((error) => {
       //prints error message in console in case there was an error fetching from api
@@ -80,7 +78,6 @@ function displayBooks(books) {
 
   // Loop through the books and create a result entry for each book
   books.forEach((book) => {
-    console.log(book);
     const bookInfo = book.volumeInfo;
     const bookTitle = bookInfo.title;
     const bookAuthor = bookInfo.authors;

@@ -19,7 +19,7 @@ Fetching information from an API required use of JSON and traversing the objects
 
 ## Installation
 
-To run the code, clone the project directories from [the repository](https://github.com/BretKruse/team-3-project) and open the HTML and JavaScript files in preferred code editor. 
+To run the code, clone the project directories from [the repository](https://github.com/sillytsundere/bookquesters) and open the HTML and JavaScript files in preferred code editor. 
 
 The HTML files can be viewed to examine the basic display elements and how they are organized on the webpage. The following is a list of the HTML files and their respective uses:
 
@@ -61,7 +61,7 @@ Clicking the "Add to My List" button will add the selected book to the user's li
 
 ![List Page](assets/images/list.html.png)
 
-The deployed site can be reached at this link: https://sillytsundere.github.io/team-3-project/
+The deployed site can be reached at this link: https://sillytsundere.github.io/bookquesters/
 
 ## Credits
 
